@@ -1,5 +1,5 @@
-#include "canvas.h"
-#include "common.h"
+#include "../include/canvas.h"
+#include "../include/common.h"
 //y + HEIGHT* (x + WIDTH* z)
 #include "../include/canvas.h"
 
