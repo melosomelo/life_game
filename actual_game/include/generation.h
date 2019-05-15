@@ -23,6 +23,8 @@ struct Generation
             {
                 if(this->living_cells[i] != other.living_cells[i])
                     return false;
+                else
+                    continue;
             }
         }
         return true;
