@@ -16,9 +16,9 @@
 Life read_input();
 
 
-void welcome();
+void welcome(); //this is not yet implemented
 
-void print_terminal_grid();
+void print_terminal_grid(); //neither is this 
 
 
 
