@@ -13,7 +13,28 @@ struct Generation
     
     Generation(){/*empty*/}
 
-    bool operator == (Generation &other)
+    Generation(std::vector<std::vector<Cell>> &grid, int height, int lenght): state(Running) //Receives the grid to capture only the living cells
+    {
+        for(int i = 0; i < height; i++)
+        {
+            for(int j = 0; j < lenght; j++)
+            {
+                if(grid[i+1][j+1].alive)
+                    this->living_cells.push_back(grid[i+1][j+1]);
+            }
+        }
+
+    }
+
+    Generation&  operator =( const Generation &other)
+    {
+        this->living_cells = other.living_cells;
+        return *this;
+    }
+
+
+
+    bool operator == (Generation &other) const
     {
         if(this->living_cells.size() != other.living_cells.size())
             return false;
@@ -30,7 +51,6 @@ struct Generation
         return true;
     }
 
-    //Enumeration to help with the state of the Generatio
     
     int generation_number; //identifies the generation
 
@@ -40,6 +60,10 @@ struct Generation
 
 
 };
+
+
+
+
 
 
 

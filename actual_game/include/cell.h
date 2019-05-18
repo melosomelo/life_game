@@ -7,8 +7,8 @@
 struct Cell
 {
     bool alive; // check if its alive in this current generation
-    int x;  // x position
-    int y; // y position
+    int column;  // real column position
+    int line; // REAL line position
     bool alive_next_state; //check if its alive next state
     bool checked; //checks if the cell has already been analysed by the check__cell__state function
     
@@ -16,15 +16,15 @@ struct Cell
 
     Cell(){/*empty*/}
 
-    Cell(bool state): alive(state) //Default constructor that initializes a dead cell with no position
+    Cell(bool state): alive(state) //constructor that initializes a dead cell with no position
     {/*empty*/}
 
-    Cell(int w, int z): x(w), y(z) //Initializing cell with only the position
+    Cell(int w, int z): column(w), line(z) //Initializing cell with only the position
     {/*empty*/}
     
     bool operator==(Cell &other) const //defines equality amongst cells
     {
-        return (this->x == other.x) && (this->y == other.y);
+        return (this->column == other.column) && (this->line == other.line);
     }
     bool operator!=(Cell &other) const
     {
@@ -40,13 +40,7 @@ struct Cell
 
 };
 
-std::ostream& operator<<(std::ostream& os, const Cell &target) 
-{
-    os << ">>Cell of  grid position (" << target.x - 1 << "," << target.y - 1   << ")\n";
-    os << ">>>>>Alive: " << target.alive << std::endl;
-    os << ">>>>>Alive Next State: " << target.alive_next_state << std::endl;
-    return os;
-}
+
 
 
 
