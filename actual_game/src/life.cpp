@@ -135,7 +135,7 @@ void Life::update_gen_status()
         int possible_equal = this->search_for_equal_gen();
         if(possible_equal != -1)
         {
-            std::cout << ">>>FOUND THAT GENERATION " << possible_equal << " IS EQUAL TO THE CURRENT ONE. CURRENT GENERATION IS NOW STABLE. \n";
+            std::cout << ">>>FOUND THAT GENERATION " << possible_equal << " IS EQUAL TO THE CURRENT ONE. SIMULATION IS NOW STABLE. \n";
             this->current.state = Stable;
         }
         else if(this->current.living_cells.size() == 0)

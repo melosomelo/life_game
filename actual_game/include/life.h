@@ -60,7 +60,7 @@ struct Life
         bool Rule01(Cell &subject) const; //A living cell stays alive if it has more than 1 living neighbour
 
 
-        bool Rule02(Cell &subject)const ; //A living cell stays alive if it has less than 4 living neighbours
+        bool Rule02(Cell &subject) const ; //A living cell stays alive if it has less than 4 living neighbours
 
 
         bool Rule03(Cell &subject) const; //A living cell stays alive if it has 2 or 3 living neighbours
