@@ -6,9 +6,9 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include "../../image_handling/include/canvas.h"
-#include "../../image_handling/include/common.h"
-#include "../../image_handling/include/lodepng.h"
+#include "../include/canvas.h"
+#include "../include/common.h"
+#include "../include/lodepng.h"
 
 
 
@@ -87,10 +87,10 @@ class ioput
         {
             return this->maxgen;
         }
+
         /*!
         @return the fps attribute.
         */
-
         int get_fps()
         {
             return this->fps;

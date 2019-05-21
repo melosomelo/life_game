@@ -14,21 +14,25 @@ It is responsible for determining everything that involves the Cell and Generati
 */
 struct Life
 {      
-     public:
+     private:
         using Grid = std::vector<std::vector<Cell>>;
 
 
         
-        Grid Cells;/*!<A matrix of cells*/
 
-        std::vector<Generation> all_generations;/*!<All the past generations of living cells*/
 
-        Generation current; /*!<The current generation of living cells*/
 
         int lenght; /*!<VIRTUAL lenght*/
         int height; /*!<VIRTUAL height*/
 
-
+    public:
+        std::vector<Generation> all_generations;/*!<All the past generations of living cells*/
+        
+        Generation current; /*!<The current generation of living cells*/
+        
+        Grid Cells;/*!<A matrix of cells*/
+        
+        
         /*!
         \brief Regular constructor
         */
@@ -44,7 +48,6 @@ struct Life
         analysis of the surrounding area of the limit cells
         */
         Life(int lines, int columns);//Initializing the struct with the dimensions of the grid
-
 
         /*!
         Definition of the attribution operator for the Life object. 
@@ -110,7 +113,23 @@ struct Life
         */
         void check_cell_state(Cell &subject);
 
+        
+        /*!
+            This function return the Grid height
+            @return height
+        */
+        
+        int get_height() const{
+            return height;
+        }
 
+        /*!
+        This function return the Grid height
+        @return height
+        */
+        int get_lenght() const{
+            return lenght;
+        }
         /*!
         A function that applies the check_cell_state function in a cell and in all of its neighbours
         @param a Cell

@@ -21,10 +21,10 @@ namespace life
         for( int y = point.y*m_block_size; y < (point.y + 1)*m_block_size; y++)
             for( int x = point.x*m_block_size; x < (point.x + 1)*m_block_size; x++ )
             { 
-                m_pixels[(y*m_width + x)*4] = color.channels[0];
-                m_pixels[(y*m_width + x)*4 +1] = color.channels[1];
-                m_pixels[(y*m_width + x)*4 +2] = color.channels[2];
-                m_pixels[(y*m_width + x)*4 +3] = 255;
+                m_pixels[ y * m_width * image_depth +  x*image_depth + 0] = color.channels[0]; 
+                m_pixels[ y * m_width * image_depth +  x*image_depth + 1] = color.channels[1];
+                m_pixels[ y * m_width * image_depth +  x*image_depth + 2] = color.channels[2];
+                m_pixels[ y * m_width * image_depth +  x*image_depth + 3] = 255;
             }
     }
     Color Canvas::pixel(const Point2 & point) const

@@ -43,7 +43,7 @@ int Life::count_alive_neighbours(Cell &subject) const
 bool Life::Rule01(Cell &subject) const
 {
     int alive_neighbours = count_alive_neighbours(subject);
-    return alive_neighbours > 1;
+    return alive_neighbours <= 1;
 
 }
 
@@ -51,7 +51,7 @@ bool Life::Rule01(Cell &subject) const
 bool Life::Rule02(Cell &subject) const
 {
     int alive_neighbours = count_alive_neighbours(subject);
-    return alive_neighbours < 4;
+    return alive_neighbours >= 4;
 
 }
 
@@ -69,8 +69,15 @@ bool Life::Rule04(Cell &subject) const
 
 void Life::check_cell_state(Cell &subject)
 {
-    if(subject.alive)
-        subject.alive_next_state = (Rule01(subject) && Rule02(subject) && Rule03(subject));
+    if(subject.alive){
+
+        if (Rule01(subject) || Rule02(subject) ) {
+            subject.alive_next_state = false;
+        }
+        if(Rule03(subject)){
+            subject.alive_next_state = true;
+        }
+    }
     else
         subject.alive_next_state = Rule04(subject);
 }
