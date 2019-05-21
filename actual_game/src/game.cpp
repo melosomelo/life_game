@@ -6,8 +6,7 @@
 #include <iostream>
 #include <fstream>
 
-//THIS IS ONLY A TESTING FILE TO TEST THE STRUCTS THAT WE'VE BEEN MAKING
-//USE IT AT YOUR OWN WILL BUT MAKE SURE TO LEAVE SOME COMMENTS TO WHAT YOU'RE TESTING
+
 
 std::ostream& operator<<(std::ostream& os, const Cell &target) 
 {
