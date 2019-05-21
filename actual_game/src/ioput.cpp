@@ -8,7 +8,7 @@ Life ioput::read_input()
     std::ifstream input_specs; //file from which we will read the specs
     std::string line; //string to store lines from the file 
     char alive_char;
-    input_specs.open("specs.txt");
+    input_specs.open(this->infile);
     input_specs >> height >> lenght;
     Life grid(height, lenght); //initializing the new object
     input_specs >> alive_char; 
@@ -128,10 +128,12 @@ void ioput::check_cmd_line_specs(char* argv[], int argc)
         }
         else
         {
-            throw std::invalid_argument("INVALID ARGUMENT RECEIVED. CHECK --help TO SEE POSSIBLE CONFIGURATIONS");
+            this->infile = argv[i];
         }
         
+        
     }
+
     
 }
 

@@ -109,7 +109,7 @@ void Life::update_current_generation()
     
 }
 
-int Life::search_for_equal_gen()  //appears to be working
+int Life::search_for_equal_gen() 
 {
     for(const auto &i: this->all_generations)
     {   
