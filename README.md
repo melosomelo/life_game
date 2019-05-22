@@ -40,6 +40,7 @@ You can also, when executing the `main` file, use command line arguments to spec
 
 Otherwhise, there is a `CMakeLists.txt` file avaible and to use it you need to type the following command line instructions:
 ```
+cd actual_game
 mkdir build
 cd build
 cmake ..
