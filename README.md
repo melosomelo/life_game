@@ -34,9 +34,9 @@ Manages the whole simulation and controls it since it's in charge of running the
 To compile this simulation you can use our `main.cpp` file that is ready and compile it through the following line of command: 
 
 ```
-g++ main.cpp ioput.cpp life.cpp -o main 
+g++ game.cpp ioput.cpp life.cpp ../../image_handling/src/*.cpp -o game
 ```
-You can also, when executing the `main` file, use command line arguments to specify some configurations, such as the directory in which you want to store images, the background color of the images, as well as the color of each living cells (**Check doxygen or execute ```./main --help```**).
+You can also, when executing the `main` file, use command line arguments to specify some configurations, such as the directory in which you want to store images, the background color of the images, as well as the color of each living cells (**Check doxygen or execute ```./game --help```**).
 
 Otherwhise, there is a `CMakeLists.txt` file avaible and to use it you need to type the following command line instructions:
 ```
@@ -47,3 +47,10 @@ make
 ./game <arguments>
 ```
 
+# P.S.
+
+It is worth mentioning that the `specs.txt` must remain in the `/src` folder since it is specified as such in the ioput regular constructor. If you want to change that, remember to also change the constructor. 
+
+Also, by default, the `simulation.txt` resultant file will be placed in the same folder as the executable `game`. If you want to change that, change the ioput default constructor.
+
+**Have fun!**
