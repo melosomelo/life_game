@@ -137,6 +137,40 @@ void ioput::check_cmd_line_specs(char* argv[], int argc)
     
 }
 
+void encode_png(const char* filename, const unsigned char * image, unsigned width, unsigned height)
+{
+    //Encode the image
+    unsigned error = lodepng::encode(filename, image, width, height);
+
+    //if there's an error, display it
+    if(error) std::cout << "encoder error " << error << ": "<< lodepng_error_text(error) << std::endl;
+}
+
+void ioput::paint_canvas(life::Canvas &image, Life &game, int counter)
+{
+
+    life::Color alive_color = this->alivecolor;
+    life::Color bkg = this->bkgcolor;
+    std::string temporary = this->imgdir;
+    temporary += "Generation";
+    temporary += std::to_string(counter);
+    temporary += ".png";
+    const char* filename = temporary.c_str();
+    for(auto x (0u); x < game.get_lenght(); x++)
+    {
+        for(auto y (0u); y < game.get_height(); y++)
+        {
+            if(game.Cells[y+1][x+1].alive)
+                image.pixel(life::Point2(x,y), this->alivecolor);
+            else
+                image.pixel(life::Point2(x,y), this->bkgcolor);
+
+        }
+    }
+    encode_png(filename, image.pixels(), image.width(), image.height());
+
+}
+
 void ioput::print() //this is a test function to test if the specs are being captured. It will be deleted later.
 {
     std::cout << "HELP IS " << this->help << std::endl

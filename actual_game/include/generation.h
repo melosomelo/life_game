@@ -78,11 +78,11 @@ struct Generation
     }
 
     
-    int generation_number; /*!<Generation number for identification*/
+    int generation_number; //!<Generation number for identification
 
-    int state; /*!<State according to the enum previously defined*/
+    int state; //!<State according to the enum previously defined
 
-    std::vector<Cell> living_cells; /*!<Vector to story the living cell of each generation*/
+    std::vector<Cell> living_cells; //!<Vector to story the living cell of each generation
 
 
 };

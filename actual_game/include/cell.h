@@ -11,10 +11,10 @@ and it only does really simple things, such as guard its own characteristics.s
 */
 struct Cell
 {
-    bool alive;/*!<Signals if the cell is alive or not*/ 
-    int column;/*!<The column in which the cell is*/
-    int line; /*!<The line in which the cell is*/
-    bool alive_next_state;/*!<Signals if the cell will be alive in the next gen*/
+    bool alive;//!<Signals if the cell is alive or not
+    int column;//!<The column in which the cell is
+    int line; //!<The line in which the cell is
+    bool alive_next_state;//!<Signals if the cell will be alive in the next gen
     
 
     /*!

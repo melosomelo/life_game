@@ -6,9 +6,9 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include "../include/canvas.h"
-#include "../include/common.h"
-#include "../include/lodepng.h"
+#include "../../image_handling/include/canvas.h"
+#include "../../image_handling/include/common.h"
+#include "../../image_handling/include/lodepng.h"
 
 
 
@@ -21,15 +21,15 @@ such as .mp4 and .txt files as well as the cmd line output.
 class ioput
 {
     private:
-        bool help; /*!<Signals if the user wants to print the help text*/
-        std::string imgdir; /*!<The directory in which the images will be store*/
-        int maxgen; /*!<The max number of generation simulations. Default is = - 1, since it will have none*/
-        int fps; /*!<The number of frame per seconds. Default = 1*/
-        int blocksize;/*!<Cellsize(in pixels) in the .mp4 file. It will determine a square in the .mp4 file with the. Default = 5 */
-        life::Color bkgcolor;/*!<Background color of the .mp4 file. See common.h library. Default = GREEN*/
-        life::Color alivecolor;/*!<Color of the alive cell block. Deafault = RED*/
-        std::string outfile;/*!<Outfile name of the simulation output*/
-        std::string infile;/*!<File from which we will read the specs of the cell grid. Default = specs.txt*/
+        bool help; //!<Signals if the user wants to print the help text
+        std::string imgdir; //!<The directory in which the images will be stored
+        int maxgen; //!<The max number of generation simulations. Default is = - 1, since it will have none
+        int fps; //!<The number of frame per seconds. Default = 1
+        int blocksize;//!<Cellsize(in pixels) in the .mp4 file. It will determine a square in the .mp4 file with the. Default = 5 
+        life::Color bkgcolor;//!<Background color of the .mp4 file. See common.h library. Default = GREEN
+        life::Color alivecolor;//!<Color of the alive cell block. Deafault = RED
+        std::string outfile;//!<Outfile name of the simulation output
+        std::string infile;//!<File from which we will read the specs of the cell grid. Default = specs.txt
     public:
         /*!
         \brief Regular destructor
@@ -38,7 +38,7 @@ class ioput
         /*!
         \brief Default constructor with the default parameters already set.
         */
-        ioput(): help(false), imgdir("null"), maxgen(-1), fps(1), blocksize(5), bkgcolor(life::GREEN), alivecolor(life::RED), outfile("simulation.txt"), infile("specs.txt")
+        ioput(): help(false), imgdir("null"), maxgen(-1), fps(1), blocksize(50), bkgcolor(life::GREEN), alivecolor(life::RED), outfile("simulation.txt"), infile("../src/specs.txt")
         {/*empty*/}
 
         /*!
@@ -87,10 +87,10 @@ class ioput
         {
             return this->maxgen;
         }
-
         /*!
         @return the fps attribute.
         */
+
         int get_fps()
         {
             return this->fps;
@@ -134,6 +134,17 @@ class ioput
             return this->infile;
         }
 
+        /*!
+        Paints a .png screenshot of the current generation and stores it in 
+        the imgdir attribute. It will only be called upon if the imgdir attribute is different 
+        from "null"
+        @param the Canvas object that we will use to paint the image.
+        @param the Life object from which we will acess the cell states.
+        */
+        void paint_canvas(life::Canvas &image, Life &game, int counter);
+        
+
+
         
     
 
@@ -153,6 +164,8 @@ void welcome();
  */
 void print_help();
 
+
+void encode_png(const char* filename, const unsigned char * image, unsigned width, unsigned height);
 
 
 

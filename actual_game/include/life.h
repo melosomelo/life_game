@@ -14,25 +14,32 @@ It is responsible for determining everything that involves the Cell and Generati
 */
 struct Life
 {      
-     private:
+     public:
         using Grid = std::vector<std::vector<Cell>>;
 
 
-        
+    
+        Grid Cells;//!<A matrix of cells
+
+        std::vector<Generation> all_generations;//!<All the past generations of living cells
+
+        Generation current; //!<The current generation of living cells
+
+        int lenght; //!<VIRTUAL lenght
+        int height; //!<VIRTUAL height
 
 
+        int get_lenght()
+        {
+            return this->lenght;
+        }
 
-        int lenght; /*!<VIRTUAL lenght*/
-        int height; /*!<VIRTUAL height*/
+        int get_height()
+        {
+            return this->height;
+        }
 
-    public:
-        std::vector<Generation> all_generations;/*!<All the past generations of living cells*/
-        
-        Generation current; /*!<The current generation of living cells*/
-        
-        Grid Cells;/*!<A matrix of cells*/
-        
-        
+
         /*!
         \brief Regular constructor
         */
@@ -48,6 +55,7 @@ struct Life
         analysis of the surrounding area of the limit cells
         */
         Life(int lines, int columns);//Initializing the struct with the dimensions of the grid
+
 
         /*!
         Definition of the attribution operator for the Life object. 
@@ -95,15 +103,15 @@ struct Life
     ///===Rules 
     // == By definition, if the return value is true, then the cell's next state will be alive.
     // == All the rules are functional and have been tested. 
-        bool Rule01(Cell &subject) const; /*!<Rule 01 of the game*/
+        bool Rule01(Cell &subject) const; /**<Rule 01 of the game*/
 
 
-        bool Rule02(Cell &subject) const ; /*!<Rule 02 of the game*/
+        bool Rule02(Cell &subject) const ; /**<Rule 02 of the game*/
 
 
-        bool Rule03(Cell &subject) const; /*<Rule 03 of the game*/
+        bool Rule03(Cell &subject) const; /**<Rule 03 of the game*/
 
-        bool Rule04(Cell &subject) const; /*<Rule 04 of the game*/
+        bool Rule04(Cell &subject) const; /**Rule 04 of the game*/
 
 
         /*!
@@ -113,23 +121,7 @@ struct Life
         */
         void check_cell_state(Cell &subject);
 
-        
-        /*!
-            This function return the Grid height
-            @return height
-        */
-        
-        int get_height() const{
-            return height;
-        }
 
-        /*!
-        This function return the Grid height
-        @return height
-        */
-        int get_lenght() const{
-            return lenght;
-        }
         /*!
         A function that applies the check_cell_state function in a cell and in all of its neighbours
         @param a Cell
