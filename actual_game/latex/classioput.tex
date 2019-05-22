@@ -1,0 +1,165 @@
+\hypertarget{classioput}{}\section{ioput Class Reference}
+\label{classioput}\index{ioput@{ioput}}
+
+
+{\ttfamily \#include $<$ioput.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classioput_aea5a1bca65c2913493bd833d4007f389}\label{classioput_aea5a1bca65c2913493bd833d4007f389}} 
+\hyperlink{classioput_aea5a1bca65c2913493bd833d4007f389}{$\sim$ioput} ()
+\begin{DoxyCompactList}\small\item\em Regular destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classioput_aecb5d404c1b54f68e81b74d386ec897e}\label{classioput_aecb5d404c1b54f68e81b74d386ec897e}} 
+\hyperlink{classioput_aecb5d404c1b54f68e81b74d386ec897e}{ioput} ()
+\begin{DoxyCompactList}\small\item\em Default constructor with the default parameters already set. \end{DoxyCompactList}\item 
+\hyperlink{structLife}{Life} \hyperlink{classioput_a8d0f8f175f48d2102e99483b6f1181ed}{read\+\_\+input} ()
+\item 
+void \hyperlink{classioput_affa8f83e3d696f8b083d69c062f45bed}{check\+\_\+cmd\+\_\+line\+\_\+specs} (char $\ast$argv\mbox{[}$\,$\mbox{]}, int argc)
+\item 
+\mbox{\Hypertarget{classioput_a577216089b6dafa42ebd5179783e19c5}\label{classioput_a577216089b6dafa42ebd5179783e19c5}} 
+life\+::\+Color \hyperlink{classioput_a577216089b6dafa42ebd5179783e19c5}{determine\+\_\+color} (std\+::string color)
+\begin{DoxyCompactList}\small\item\em A separate function to determine the color of the background and the alivecolor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classioput_aee27ef187bdf606056e364ff03604d7b}\label{classioput_aee27ef187bdf606056e364ff03604d7b}} 
+void {\bfseries print} ()
+\item 
+bool \hyperlink{classioput_ad6cd7eba7190641dca05acdef9d4e959}{get\+\_\+help} ()
+\item 
+std\+::string \hyperlink{classioput_a25f843ebe6f2f29ca45470d4b02c1389}{get\+\_\+imgdir} ()
+\item 
+int \hyperlink{classioput_af5603ef96a4ae8db6f02d6d35227ac64}{get\+\_\+maxgen} ()
+\item 
+int \hyperlink{classioput_ad57f6282c14f07f221185e73d9d2889d}{get\+\_\+fps} ()
+\item 
+int \hyperlink{classioput_aae6979078f699f9b769297664ee26396}{get\+\_\+blocksize} ()
+\item 
+life\+::\+Color \hyperlink{classioput_a5c708adf775782056bac78f5a8596ace}{get\+\_\+bkgcolor} ()
+\item 
+life\+::\+Color \hyperlink{classioput_a11c07552398d47f872787e3f0a7aee40}{get\+\_\+alivecolor} ()
+\item 
+std\+::string \hyperlink{classioput_abdde82b7076a334519ada5f3a74d579a}{get\+\_\+outfile} ()
+\item 
+std\+::string \hyperlink{classioput_a7a165641e61846400db59840c5a6a160}{get\+\_\+infile} ()
+\item 
+void \hyperlink{classioput_a4433619447855826728a3dca5f94d2b3}{paint\+\_\+canvas} (life\+::\+Canvas \&image, \hyperlink{structLife}{Life} \&game, int counter)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that\textquotesingle{}s in charge of taking care of all inputs, such as files, and outputting everything that is required, such as .mp4 and .txt files as well as the cmd line output. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classioput_affa8f83e3d696f8b083d69c062f45bed}\label{classioput_affa8f83e3d696f8b083d69c062f45bed}} 
+\index{ioput@{ioput}!check\+\_\+cmd\+\_\+line\+\_\+specs@{check\+\_\+cmd\+\_\+line\+\_\+specs}}
+\index{check\+\_\+cmd\+\_\+line\+\_\+specs@{check\+\_\+cmd\+\_\+line\+\_\+specs}!ioput@{ioput}}
+\subsubsection{\texorpdfstring{check\+\_\+cmd\+\_\+line\+\_\+specs()}{check\_cmd\_line\_specs()}}
+{\footnotesize\ttfamily void ioput\+::check\+\_\+cmd\+\_\+line\+\_\+specs (\begin{DoxyParamCaption}\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{int}]{argc }\end{DoxyParamCaption})}
+
+Reads the command line arguments and sets all of them to different ones, if specified. If not, the default ones will remain. If the user inputs a wrong argument, it will be interpreted as the infile, resulting in an error. \mbox{\Hypertarget{classioput_a11c07552398d47f872787e3f0a7aee40}\label{classioput_a11c07552398d47f872787e3f0a7aee40}} 
+\index{ioput@{ioput}!get\+\_\+alivecolor@{get\+\_\+alivecolor}}
+\index{get\+\_\+alivecolor@{get\+\_\+alivecolor}!ioput@{ioput}}
+\subsubsection{\texorpdfstring{get\+\_\+alivecolor()}{get\_alivecolor()}}
+{\footnotesize\ttfamily life\+::\+Color ioput\+::get\+\_\+alivecolor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The alivecolor attribute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classioput_a5c708adf775782056bac78f5a8596ace}\label{classioput_a5c708adf775782056bac78f5a8596ace}} 
+\index{ioput@{ioput}!get\+\_\+bkgcolor@{get\+\_\+bkgcolor}}
+\index{get\+\_\+bkgcolor@{get\+\_\+bkgcolor}!ioput@{ioput}}
+\subsubsection{\texorpdfstring{get\+\_\+bkgcolor()}{get\_bkgcolor()}}
+{\footnotesize\ttfamily life\+::\+Color ioput\+::get\+\_\+bkgcolor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The bkgcolor attribute. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classioput_aae6979078f699f9b769297664ee26396}\label{classioput_aae6979078f699f9b769297664ee26396}} 
+\index{ioput@{ioput}!get\+\_\+blocksize@{get\+\_\+blocksize}}
+\index{get\+\_\+blocksize@{get\+\_\+blocksize}!ioput@{ioput}}
+\subsubsection{\texorpdfstring{get\+\_\+blocksize()}{get\_blocksize()}}
+{\footnotesize\ttfamily int ioput\+::get\+\_\+blocksize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The blocksize attribute. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classioput_ad57f6282c14f07f221185e73d9d2889d}\label{classioput_ad57f6282c14f07f221185e73d9d2889d}} 
+\index{ioput@{ioput}!get\+\_\+fps@{get\+\_\+fps}}
+\index{get\+\_\+fps@{get\+\_\+fps}!ioput@{ioput}}
+\subsubsection{\texorpdfstring{get\+\_\+fps()}{get\_fps()}}
+{\footnotesize\ttfamily int ioput\+::get\+\_\+fps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the fps attribute. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classioput_ad6cd7eba7190641dca05acdef9d4e959}\label{classioput_ad6cd7eba7190641dca05acdef9d4e959}} 
+\index{ioput@{ioput}!get\+\_\+help@{get\+\_\+help}}
+\index{get\+\_\+help@{get\+\_\+help}!ioput@{ioput}}
+\subsubsection{\texorpdfstring{get\+\_\+help()}{get\_help()}}
+{\footnotesize\ttfamily bool ioput\+::get\+\_\+help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The help attribute. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classioput_a25f843ebe6f2f29ca45470d4b02c1389}\label{classioput_a25f843ebe6f2f29ca45470d4b02c1389}} 
+\index{ioput@{ioput}!get\+\_\+imgdir@{get\+\_\+imgdir}}
+\index{get\+\_\+imgdir@{get\+\_\+imgdir}!ioput@{ioput}}
+\subsubsection{\texorpdfstring{get\+\_\+imgdir()}{get\_imgdir()}}
+{\footnotesize\ttfamily std\+::string ioput\+::get\+\_\+imgdir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The imgdir attribute. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classioput_a7a165641e61846400db59840c5a6a160}\label{classioput_a7a165641e61846400db59840c5a6a160}} 
+\index{ioput@{ioput}!get\+\_\+infile@{get\+\_\+infile}}
+\index{get\+\_\+infile@{get\+\_\+infile}!ioput@{ioput}}
+\subsubsection{\texorpdfstring{get\+\_\+infile()}{get\_infile()}}
+{\footnotesize\ttfamily std\+::string ioput\+::get\+\_\+infile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the infile attribute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classioput_af5603ef96a4ae8db6f02d6d35227ac64}\label{classioput_af5603ef96a4ae8db6f02d6d35227ac64}} 
+\index{ioput@{ioput}!get\+\_\+maxgen@{get\+\_\+maxgen}}
+\index{get\+\_\+maxgen@{get\+\_\+maxgen}!ioput@{ioput}}
+\subsubsection{\texorpdfstring{get\+\_\+maxgen()}{get\_maxgen()}}
+{\footnotesize\ttfamily int ioput\+::get\+\_\+maxgen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The maxgen attribute. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classioput_abdde82b7076a334519ada5f3a74d579a}\label{classioput_abdde82b7076a334519ada5f3a74d579a}} 
+\index{ioput@{ioput}!get\+\_\+outfile@{get\+\_\+outfile}}
+\index{get\+\_\+outfile@{get\+\_\+outfile}!ioput@{ioput}}
+\subsubsection{\texorpdfstring{get\+\_\+outfile()}{get\_outfile()}}
+{\footnotesize\ttfamily std\+::string ioput\+::get\+\_\+outfile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The outlife attribute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classioput_a4433619447855826728a3dca5f94d2b3}\label{classioput_a4433619447855826728a3dca5f94d2b3}} 
+\index{ioput@{ioput}!paint\+\_\+canvas@{paint\+\_\+canvas}}
+\index{paint\+\_\+canvas@{paint\+\_\+canvas}!ioput@{ioput}}
+\subsubsection{\texorpdfstring{paint\+\_\+canvas()}{paint\_canvas()}}
+{\footnotesize\ttfamily void ioput\+::paint\+\_\+canvas (\begin{DoxyParamCaption}\item[{life\+::\+Canvas \&}]{image,  }\item[{\hyperlink{structLife}{Life} \&}]{game,  }\item[{int}]{counter }\end{DoxyParamCaption})}
+
+Paints a .png screenshot of the current generation and stores it in the imgdir attribute. It will only be called upon if the imgdir attribute is different from \char`\"{}null\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em the} & Canvas object that we will use to paint the image. \\
+\hline
+{\em the} & \hyperlink{structLife}{Life} object from which we will acess the cell states. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classioput_a8d0f8f175f48d2102e99483b6f1181ed}\label{classioput_a8d0f8f175f48d2102e99483b6f1181ed}} 
+\index{ioput@{ioput}!read\+\_\+input@{read\+\_\+input}}
+\index{read\+\_\+input@{read\+\_\+input}!ioput@{ioput}}
+\subsubsection{\texorpdfstring{read\+\_\+input()}{read\_input()}}
+{\footnotesize\ttfamily \hyperlink{structLife}{Life} ioput\+::read\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads the input from the infile attribute and sets the grid of the cells. In order it reads the dimensions of the grid, the ammount of lines and columns, the alive character that will be read in the next line to signal a living cell and the state of the following lines. Any character that is different from the one specified will be considering a dead cell. \begin{DoxyReturn}{Returns}
+A \hyperlink{structLife}{Life} object with the grid as specified. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ioput.\+h\end{DoxyCompactItemize}

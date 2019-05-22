@@ -1,0 +1,211 @@
+\hypertarget{structLife}{}\section{Life Struct Reference}
+\label{structLife}\index{Life@{Life}}
+
+
+{\ttfamily \#include $<$life.\+h$>$}
+
+
+
+Collaboration diagram for Life\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structLife_a1ca5fe49a60e69bbd7afd0688cf09fc7}\label{structLife_a1ca5fe49a60e69bbd7afd0688cf09fc7}} 
+using {\bfseries Grid} = std\+::vector$<$ std\+::vector$<$ \hyperlink{structCell}{Cell} $>$ $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structLife_a356fabc929f4eb9e6c81948abc9de932}\label{structLife_a356fabc929f4eb9e6c81948abc9de932}} 
+int {\bfseries get\+\_\+lenght} ()
+\item 
+\mbox{\Hypertarget{structLife_a43d281b850cc46503f7a60c5dce62872}\label{structLife_a43d281b850cc46503f7a60c5dce62872}} 
+int {\bfseries get\+\_\+height} ()
+\item 
+\mbox{\Hypertarget{structLife_a6de2a371f6f778f8b4938d219390b746}\label{structLife_a6de2a371f6f778f8b4938d219390b746}} 
+\hyperlink{structLife_a6de2a371f6f778f8b4938d219390b746}{Life} ()
+\begin{DoxyCompactList}\small\item\em Regular constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structLife_ac5a521e06906fb4f834001b2b4f7adc7}\label{structLife_ac5a521e06906fb4f834001b2b4f7adc7}} 
+\hyperlink{structLife_ac5a521e06906fb4f834001b2b4f7adc7}{$\sim$\+Life} ()
+\begin{DoxyCompactList}\small\item\em Regular destructor. \end{DoxyCompactList}\item 
+\hyperlink{structLife_aa4b3c5a24a7502f2520f60a16c960d8b}{Life} (int lines, int columns)
+\item 
+\hyperlink{structLife}{Life} \& \hyperlink{structLife_a3cf4418aad971541a266c5c674abed4f}{operator=} (const \hyperlink{structLife}{Life} \&other)
+\item 
+bool \hyperlink{structLife_acf48a4258429d9278d14b1baaee4bbc0}{stable} () const
+\item 
+bool \hyperlink{structLife_aa1d3b2ac3853abc7dfd9a6d874d5c0c1}{extinct} () const
+\item 
+int \hyperlink{structLife_a56236752214f89e4fc5427b0ccc7776b}{count\+\_\+alive\+\_\+neighbours} (\hyperlink{structCell}{Cell} \&subject) const
+\item 
+bool \hyperlink{structLife_aa2ca8d3de84c706ac8a5cba9649725e4}{Rule01} (\hyperlink{structCell}{Cell} \&subject) const
+\begin{DoxyCompactList}\small\item\em ===Rules \end{DoxyCompactList}\item 
+bool \hyperlink{structLife_a72dcf67f096a735d93ecc0386f4ae212}{Rule02} (\hyperlink{structCell}{Cell} \&subject) const
+\item 
+bool \hyperlink{structLife_af12f816ab720df228a4a9a682b34025a}{Rule03} (\hyperlink{structCell}{Cell} \&subject) const
+\item 
+\mbox{\Hypertarget{structLife_a7a6e436ec1a0c49b0f785c7bdd34d0a6}\label{structLife_a7a6e436ec1a0c49b0f785c7bdd34d0a6}} 
+bool {\bfseries Rule04} (\hyperlink{structCell}{Cell} \&subject) const
+\item 
+void \hyperlink{structLife_a53d05b1e4ded351a4be87a06c2a6d359}{check\+\_\+cell\+\_\+state} (\hyperlink{structCell}{Cell} \&subject)
+\item 
+void \hyperlink{structLife_a84596a36e20b4ae75d1751dcc4aff12c}{check\+\_\+surroundings} (\hyperlink{structCell}{Cell} \&subject)
+\item 
+void \hyperlink{structLife_ab58758a2d1f3bc05d9c0449736d0d532}{update\+\_\+current\+\_\+generation} ()
+\item 
+int \hyperlink{structLife_a7a89dd7354f6662bf59dee90f2035bb4}{search\+\_\+for\+\_\+equal\+\_\+gen} ()
+\item 
+void \hyperlink{structLife_aa976f4db2df940d9cf98c206a461ad67}{update\+\_\+gen\+\_\+status} ()
+\item 
+void \hyperlink{structLife_a0e00f2735584f3ddebb397742b520d3b}{update} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structLife_a570544ddbe8066d23684bbe184fa8409}\label{structLife_a570544ddbe8066d23684bbe184fa8409}} 
+Grid \hyperlink{structLife_a570544ddbe8066d23684bbe184fa8409}{Cells}
+\begin{DoxyCompactList}\small\item\em A matrix of cells. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structLife_a18cdbe39cb2d10d096d5871ee6e86319}\label{structLife_a18cdbe39cb2d10d096d5871ee6e86319}} 
+std\+::vector$<$ \hyperlink{structGeneration}{Generation} $>$ \hyperlink{structLife_a18cdbe39cb2d10d096d5871ee6e86319}{all\+\_\+generations}
+\begin{DoxyCompactList}\small\item\em All the past generations of living cells. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structLife_a4e16db21f2f9af844aebd396bba8d02f}\label{structLife_a4e16db21f2f9af844aebd396bba8d02f}} 
+\hyperlink{structGeneration}{Generation} \hyperlink{structLife_a4e16db21f2f9af844aebd396bba8d02f}{current}
+\begin{DoxyCompactList}\small\item\em The current generation of living cells. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structLife_ac96b87a799a41b671ff55e7c58a5ba39}\label{structLife_ac96b87a799a41b671ff55e7c58a5ba39}} 
+int \hyperlink{structLife_ac96b87a799a41b671ff55e7c58a5ba39}{lenght}
+\begin{DoxyCompactList}\small\item\em V\+I\+R\+T\+U\+AL lenght. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structLife_a92017c94248056870a65bdef86372ea4}\label{structLife_a92017c94248056870a65bdef86372ea4}} 
+int \hyperlink{structLife_a92017c94248056870a65bdef86372ea4}{height}
+\begin{DoxyCompactList}\small\item\em V\+I\+R\+T\+U\+AL height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The main data structure of the game. It manages all the main game functions and updates every single generation It is responsible for determining everything that involves the \hyperlink{structCell}{Cell} and \hyperlink{structGeneration}{Generation} structs, since both are only storage-\/driven. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structLife_aa4b3c5a24a7502f2520f60a16c960d8b}\label{structLife_aa4b3c5a24a7502f2520f60a16c960d8b}} 
+\index{Life@{Life}!Life@{Life}}
+\index{Life@{Life}!Life@{Life}}
+\subsubsection{\texorpdfstring{Life()}{Life()}}
+{\footnotesize\ttfamily Life\+::\+Life (\begin{DoxyParamCaption}\item[{int}]{lines,  }\item[{int}]{columns }\end{DoxyParamCaption})}
+
+An alternate constructor that initializes the grid filled of dead cells with the amount of lines and columns. It allocates a larger matrix with +2 lines and columns since these extra lines and columns will help us in the analysis of the surrounding area of the limit cells 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structLife_a53d05b1e4ded351a4be87a06c2a6d359}\label{structLife_a53d05b1e4ded351a4be87a06c2a6d359}} 
+\index{Life@{Life}!check\+\_\+cell\+\_\+state@{check\+\_\+cell\+\_\+state}}
+\index{check\+\_\+cell\+\_\+state@{check\+\_\+cell\+\_\+state}!Life@{Life}}
+\subsubsection{\texorpdfstring{check\+\_\+cell\+\_\+state()}{check\_cell\_state()}}
+{\footnotesize\ttfamily void Life\+::check\+\_\+cell\+\_\+state (\begin{DoxyParamCaption}\item[{\hyperlink{structCell}{Cell} \&}]{subject }\end{DoxyParamCaption})}
+
+Rule 04 of the game
+
+A function that determines the cell\textquotesingle{}s alive\+\_\+next\+\_\+state param. It counts the amount of living neighbours and applies all the rules. 
+\begin{DoxyParams}{Parameters}
+{\em A} & cell \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structLife_a84596a36e20b4ae75d1751dcc4aff12c}\label{structLife_a84596a36e20b4ae75d1751dcc4aff12c}} 
+\index{Life@{Life}!check\+\_\+surroundings@{check\+\_\+surroundings}}
+\index{check\+\_\+surroundings@{check\+\_\+surroundings}!Life@{Life}}
+\subsubsection{\texorpdfstring{check\+\_\+surroundings()}{check\_surroundings()}}
+{\footnotesize\ttfamily void Life\+::check\+\_\+surroundings (\begin{DoxyParamCaption}\item[{\hyperlink{structCell}{Cell} \&}]{subject }\end{DoxyParamCaption})}
+
+A function that applies the check\+\_\+cell\+\_\+state function in a cell and in all of its neighbours 
+\begin{DoxyParams}{Parameters}
+{\em a} & \hyperlink{structCell}{Cell} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structLife_a56236752214f89e4fc5427b0ccc7776b}\label{structLife_a56236752214f89e4fc5427b0ccc7776b}} 
+\index{Life@{Life}!count\+\_\+alive\+\_\+neighbours@{count\+\_\+alive\+\_\+neighbours}}
+\index{count\+\_\+alive\+\_\+neighbours@{count\+\_\+alive\+\_\+neighbours}!Life@{Life}}
+\subsubsection{\texorpdfstring{count\+\_\+alive\+\_\+neighbours()}{count\_alive\_neighbours()}}
+{\footnotesize\ttfamily int Life\+::count\+\_\+alive\+\_\+neighbours (\begin{DoxyParamCaption}\item[{\hyperlink{structCell}{Cell} \&}]{subject }\end{DoxyParamCaption}) const}
+
+A function that counts the living neighbours of a specific cell. This is function is extremely necessary since all the Rules that determine the next state of the cell revolve around the amount of living neighbours 
+\begin{DoxyParams}{Parameters}
+{\em A} & specific cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amount of living neighbours 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structLife_aa1d3b2ac3853abc7dfd9a6d874d5c0c1}\label{structLife_aa1d3b2ac3853abc7dfd9a6d874d5c0c1}} 
+\index{Life@{Life}!extinct@{extinct}}
+\index{extinct@{extinct}!Life@{Life}}
+\subsubsection{\texorpdfstring{extinct()}{extinct()}}
+{\footnotesize\ttfamily bool Life\+::extinct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+A bool to signal if the generation is extinct 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structLife_a3cf4418aad971541a266c5c674abed4f}\label{structLife_a3cf4418aad971541a266c5c674abed4f}} 
+\index{Life@{Life}!operator=@{operator=}}
+\index{operator=@{operator=}!Life@{Life}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{structLife}{Life}\& Life\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{structLife}{Life} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Definition of the attribution operator for the \hyperlink{structLife}{Life} object. It receives the grid as well as its dimensions and the current generation \mbox{\Hypertarget{structLife_aa2ca8d3de84c706ac8a5cba9649725e4}\label{structLife_aa2ca8d3de84c706ac8a5cba9649725e4}} 
+\index{Life@{Life}!Rule01@{Rule01}}
+\index{Rule01@{Rule01}!Life@{Life}}
+\subsubsection{\texorpdfstring{Rule01()}{Rule01()}}
+{\footnotesize\ttfamily bool Life\+::\+Rule01 (\begin{DoxyParamCaption}\item[{\hyperlink{structCell}{Cell} \&}]{subject }\end{DoxyParamCaption}) const}
+
+
+
+===Rules 
+
+Rule 01 of the game \mbox{\Hypertarget{structLife_a72dcf67f096a735d93ecc0386f4ae212}\label{structLife_a72dcf67f096a735d93ecc0386f4ae212}} 
+\index{Life@{Life}!Rule02@{Rule02}}
+\index{Rule02@{Rule02}!Life@{Life}}
+\subsubsection{\texorpdfstring{Rule02()}{Rule02()}}
+{\footnotesize\ttfamily bool Life\+::\+Rule02 (\begin{DoxyParamCaption}\item[{\hyperlink{structCell}{Cell} \&}]{subject }\end{DoxyParamCaption}) const}
+
+Rule 02 of the game \mbox{\Hypertarget{structLife_af12f816ab720df228a4a9a682b34025a}\label{structLife_af12f816ab720df228a4a9a682b34025a}} 
+\index{Life@{Life}!Rule03@{Rule03}}
+\index{Rule03@{Rule03}!Life@{Life}}
+\subsubsection{\texorpdfstring{Rule03()}{Rule03()}}
+{\footnotesize\ttfamily bool Life\+::\+Rule03 (\begin{DoxyParamCaption}\item[{\hyperlink{structCell}{Cell} \&}]{subject }\end{DoxyParamCaption}) const}
+
+Rule 03 of the game \mbox{\Hypertarget{structLife_a7a89dd7354f6662bf59dee90f2035bb4}\label{structLife_a7a89dd7354f6662bf59dee90f2035bb4}} 
+\index{Life@{Life}!search\+\_\+for\+\_\+equal\+\_\+gen@{search\+\_\+for\+\_\+equal\+\_\+gen}}
+\index{search\+\_\+for\+\_\+equal\+\_\+gen@{search\+\_\+for\+\_\+equal\+\_\+gen}!Life@{Life}}
+\subsubsection{\texorpdfstring{search\+\_\+for\+\_\+equal\+\_\+gen()}{search\_for\_equal\_gen()}}
+{\footnotesize\ttfamily int Life\+::search\+\_\+for\+\_\+equal\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A function that searches for an equal generation to the current one. It returns -\/1 if it fails to find any. \begin{DoxyReturn}{Returns}
+The number of the generation that is equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structLife_acf48a4258429d9278d14b1baaee4bbc0}\label{structLife_acf48a4258429d9278d14b1baaee4bbc0}} 
+\index{Life@{Life}!stable@{stable}}
+\index{stable@{stable}!Life@{Life}}
+\subsubsection{\texorpdfstring{stable()}{stable()}}
+{\footnotesize\ttfamily bool Life\+::stable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+A bool to signal if the generation is stable 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structLife_a0e00f2735584f3ddebb397742b520d3b}\label{structLife_a0e00f2735584f3ddebb397742b520d3b}} 
+\index{Life@{Life}!update@{update}}
+\index{update@{update}!Life@{Life}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Life\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A general function that does all the functions that involve any form of minor update, such as updating the generation, the state of the cells, etc... \mbox{\Hypertarget{structLife_ab58758a2d1f3bc05d9c0449736d0d532}\label{structLife_ab58758a2d1f3bc05d9c0449736d0d532}} 
+\index{Life@{Life}!update\+\_\+current\+\_\+generation@{update\+\_\+current\+\_\+generation}}
+\index{update\+\_\+current\+\_\+generation@{update\+\_\+current\+\_\+generation}!Life@{Life}}
+\subsubsection{\texorpdfstring{update\+\_\+current\+\_\+generation()}{update\_current\_generation()}}
+{\footnotesize\ttfamily void Life\+::update\+\_\+current\+\_\+generation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A function that updates the alive state of all cells, stores the current generation in the all\+\_\+generations vector, assigns a new current generation and updates the number of the generation \mbox{\Hypertarget{structLife_aa976f4db2df940d9cf98c206a461ad67}\label{structLife_aa976f4db2df940d9cf98c206a461ad67}} 
+\index{Life@{Life}!update\+\_\+gen\+\_\+status@{update\+\_\+gen\+\_\+status}}
+\index{update\+\_\+gen\+\_\+status@{update\+\_\+gen\+\_\+status}!Life@{Life}}
+\subsubsection{\texorpdfstring{update\+\_\+gen\+\_\+status()}{update\_gen\_status()}}
+{\footnotesize\ttfamily void Life\+::update\+\_\+gen\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A function that updates the state of the current generation as it analysis the state of the living\+\_\+cells vector and searches for an equal generation to the current one. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/life.\+h\end{DoxyCompactItemize}

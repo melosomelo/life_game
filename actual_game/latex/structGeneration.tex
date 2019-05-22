@@ -1,0 +1,64 @@
+\hypertarget{structGeneration}{}\section{Generation Struct Reference}
+\label{structGeneration}\index{Generation@{Generation}}
+
+
+{\ttfamily \#include $<$generation.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structGeneration_abdcfe29ff21c942838e29727a25328a3}\label{structGeneration_abdcfe29ff21c942838e29727a25328a3}} 
+\hyperlink{structGeneration_abdcfe29ff21c942838e29727a25328a3}{$\sim$\+Generation} ()
+\begin{DoxyCompactList}\small\item\em A regular destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGeneration_af78b660ea3c536b52a4f76af648a209b}\label{structGeneration_af78b660ea3c536b52a4f76af648a209b}} 
+\hyperlink{structGeneration_af78b660ea3c536b52a4f76af648a209b}{Generation} ()
+\begin{DoxyCompactList}\small\item\em A regular constructor. \end{DoxyCompactList}\item 
+\hyperlink{structGeneration_a8e45e78fc1b9bcd513d58281a425baba}{Generation} (std\+::vector$<$ std\+::vector$<$ \hyperlink{structCell}{Cell} $>$$>$ \&grid, int height, int lenght)
+\item 
+\mbox{\Hypertarget{structGeneration_ad1b9349ea377d96c972c6f53008acf04}\label{structGeneration_ad1b9349ea377d96c972c6f53008acf04}} 
+\hyperlink{structGeneration}{Generation} \& \hyperlink{structGeneration_ad1b9349ea377d96c972c6f53008acf04}{operator=} (const \hyperlink{structGeneration}{Generation} \&other)
+\begin{DoxyCompactList}\small\item\em Definition of the atribution operator between \hyperlink{structGeneration}{Generation}. It receives the living\+\_\+cells vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGeneration_a15f9db07b1f6f40b05c0b3f2d911604e}\label{structGeneration_a15f9db07b1f6f40b05c0b3f2d911604e}} 
+bool \hyperlink{structGeneration_a15f9db07b1f6f40b05c0b3f2d911604e}{operator==} (\hyperlink{structGeneration}{Generation} \&other) const
+\begin{DoxyCompactList}\small\item\em Definition of the == operator between Generations. It returns true if all the living cells are the same. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structGeneration_a5ff02b52dbce4610d7e21eb4fdbe294c}\label{structGeneration_a5ff02b52dbce4610d7e21eb4fdbe294c}} 
+int \hyperlink{structGeneration_a5ff02b52dbce4610d7e21eb4fdbe294c}{generation\+\_\+number}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structGeneration}{Generation} number for identification. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGeneration_ad4d9077f76c31e0b51908047ce80a3ab}\label{structGeneration_ad4d9077f76c31e0b51908047ce80a3ab}} 
+int \hyperlink{structGeneration_ad4d9077f76c31e0b51908047ce80a3ab}{state}
+\begin{DoxyCompactList}\small\item\em State according to the enum previously defined. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structGeneration_afbdc1be1caea93849793004ed5eb1f5a}\label{structGeneration_afbdc1be1caea93849793004ed5eb1f5a}} 
+std\+::vector$<$ \hyperlink{structCell}{Cell} $>$ \hyperlink{structGeneration_afbdc1be1caea93849793004ed5eb1f5a}{living\+\_\+cells}
+\begin{DoxyCompactList}\small\item\em Vector to story the living cell of each generation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A bundle of cells. It is basically a more massive cell as it is a simple as a single one. Every generation is defined only by its living cells, since it\textquotesingle{}s an easier way to determine equality amongst generations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structGeneration_a8e45e78fc1b9bcd513d58281a425baba}\label{structGeneration_a8e45e78fc1b9bcd513d58281a425baba}} 
+\index{Generation@{Generation}!Generation@{Generation}}
+\index{Generation@{Generation}!Generation@{Generation}}
+\subsubsection{\texorpdfstring{Generation()}{Generation()}}
+{\footnotesize\ttfamily Generation\+::\+Generation (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \hyperlink{structCell}{Cell} $>$$>$ \&}]{grid,  }\item[{int}]{height,  }\item[{int}]{lenght }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+An alternate constructor that receives a matrix of all cells used in the simulation, a.\+k.\+a. grid. It captures only its living cells and pushes them back in the living\+\_\+cells vector 
+\begin{DoxyParams}{Parameters}
+{\em Grid} & of cells \\
+\hline
+{\em Height} & of the grid \\
+\hline
+{\em Lenght} & of the grid \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A generation object 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/generation.\+h\end{DoxyCompactItemize}

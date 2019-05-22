@@ -1,0 +1,53 @@
+\hypertarget{structCell}{}\section{Cell Struct Reference}
+\label{structCell}\index{Cell@{Cell}}
+
+
+{\ttfamily \#include $<$cell.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structCell_a9fa559f7a28e2b4336c6879ca09304d8}\label{structCell_a9fa559f7a28e2b4336c6879ca09304d8}} 
+\hyperlink{structCell_a9fa559f7a28e2b4336c6879ca09304d8}{$\sim$\+Cell} ()
+\begin{DoxyCompactList}\small\item\em Regular destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structCell_a394510643e8664cf12b5efaf5cb99f71}\label{structCell_a394510643e8664cf12b5efaf5cb99f71}} 
+\hyperlink{structCell_a394510643e8664cf12b5efaf5cb99f71}{Cell} ()
+\begin{DoxyCompactList}\small\item\em Regular constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structCell_a968ecc9417451e4beaf97bbfde92a366}\label{structCell_a968ecc9417451e4beaf97bbfde92a366}} 
+\hyperlink{structCell_a968ecc9417451e4beaf97bbfde92a366}{Cell} (bool state)
+\begin{DoxyCompactList}\small\item\em Initializes a cell being dead, i.\+e., alive = false. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structCell_a2d7ba9c9eaceb064abb8936fcfbe1e75}\label{structCell_a2d7ba9c9eaceb064abb8936fcfbe1e75}} 
+\hyperlink{structCell_a2d7ba9c9eaceb064abb8936fcfbe1e75}{Cell} (int w, int z)
+\begin{DoxyCompactList}\small\item\em Intializes a cell with its positions already defined. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structCell_a3135350198f9e8029260b2468810db9a}\label{structCell_a3135350198f9e8029260b2468810db9a}} 
+bool \hyperlink{structCell_a3135350198f9e8029260b2468810db9a}{operator==} (\hyperlink{structCell}{Cell} \&other) const
+\begin{DoxyCompactList}\small\item\em Defines the == operator for cells. They will be the same if their position is the same. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structCell_a04f6b5ed3c6d41183d97dd029de55f2e}\label{structCell_a04f6b5ed3c6d41183d97dd029de55f2e}} 
+bool \hyperlink{structCell_a04f6b5ed3c6d41183d97dd029de55f2e}{operator!=} (\hyperlink{structCell}{Cell} \&other) const
+\begin{DoxyCompactList}\small\item\em The opposite of the == operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structCell_a9b404d980a2bc24378a55841c9192311}\label{structCell_a9b404d980a2bc24378a55841c9192311}} 
+\hyperlink{structCell}{Cell} \& \hyperlink{structCell_a9b404d980a2bc24378a55841c9192311}{operator=} (const \hyperlink{structCell}{Cell} \&other)
+\begin{DoxyCompactList}\small\item\em Attribution operator for cells, it receives only the alive parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structCell_a516ed0ccc2782e870bfe6ba56d15d86b}\label{structCell_a516ed0ccc2782e870bfe6ba56d15d86b}} 
+bool \hyperlink{structCell_a516ed0ccc2782e870bfe6ba56d15d86b}{alive}
+\begin{DoxyCompactList}\small\item\em Signals if the cell is alive or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structCell_a6aae9428106f7cd7574660e3c2278ee0}\label{structCell_a6aae9428106f7cd7574660e3c2278ee0}} 
+int \hyperlink{structCell_a6aae9428106f7cd7574660e3c2278ee0}{column}
+\begin{DoxyCompactList}\small\item\em The column in which the cell is. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structCell_a0e62d1c17842b662b0448b13bc248c37}\label{structCell_a0e62d1c17842b662b0448b13bc248c37}} 
+int \hyperlink{structCell_a0e62d1c17842b662b0448b13bc248c37}{line}
+\begin{DoxyCompactList}\small\item\em The line in which the cell is. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structCell_ab3a70ed1328f12a0bc808e7ec468ad50}\label{structCell_ab3a70ed1328f12a0bc808e7ec468ad50}} 
+bool \hyperlink{structCell_ab3a70ed1328f12a0bc808e7ec468ad50}{alive\+\_\+next\+\_\+state}
+\begin{DoxyCompactList}\small\item\em Signals if the cell will be alive in the next gen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A abstraction of an actual \hyperlink{structCell}{Cell}. It is the basic member of the simulation and it only does really simple things, such as guard its own characteristics.\+s 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/cell.\+h\end{DoxyCompactItemize}
