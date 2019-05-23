@@ -6,9 +6,9 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include "../../image_handling/include/canvas.h"
-#include "../../image_handling/include/common.h"
-#include "../../image_handling/include/lodepng.h"
+#include "canvas.h"
+#include "common.h"
+#include "lodepng.h"
 
 
 
@@ -38,7 +38,7 @@ class ioput
         /*!
         \brief Default constructor with the default parameters already set.
         */
-        ioput(): help(false), imgdir("null"), maxgen(-1), fps(1), blocksize(50), bkgcolor(life::GREEN), alivecolor(life::RED), outfile("simulation.txt"), infile("../src/specs.txt")
+        ioput(): help(false), imgdir("null"), maxgen(-1), fps(1), blocksize(5), bkgcolor(life::GREEN), alivecolor(life::RED), outfile("simulation.txt"), infile("../src/specs.txt")
         {/*empty*/}
 
         /*!

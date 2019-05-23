@@ -2,9 +2,9 @@
 #include "../include/generation.h"
 #include "../include/life.h"
 #include "../include/ioput.h"
-#include "../../image_handling/include/canvas.h"
-#include "../../image_handling/include/common.h"
-#include "../../image_handling/include/lodepng.h"
+#include "../include/canvas.h"
+#include "../include/common.h"
+#include "../include/lodepng.h"
 #include <vector>
 #include <iostream>
 #include <fstream>

@@ -1,5 +1,7 @@
 #include "../include/ioput.h"
-
+#include "../include/canvas.h"
+#include "../include/common.h"
+#include "../include/lodepng.h"
 
 
 Life ioput::read_input()
@@ -12,12 +14,11 @@ Life ioput::read_input()
     input_specs >> height >> lenght;
     Life grid(height, lenght); //initializing the new object
     input_specs >> alive_char; 
-    input_specs.get();
-    input_specs.get();
     for(int i = 0 ; i < height; i++)
     {
         std::getline(input_specs, line);
-        for(int j = 0; j < lenght; j++)
+
+        for(int j = 0; j < line.size(); j++)
         {
             if(line[j] == alive_char)
             {
@@ -25,12 +26,12 @@ Life ioput::read_input()
                 grid.current.living_cells.push_back(grid.Cells[i+1][j+1]);
             }
         }
+
         
     }
     grid.current.generation_number = 0;
     grid.current.state = Running;
     return grid;
-
 
 }
 
@@ -188,17 +189,17 @@ void print_help()
 {
     std::cout << "Usage: glife [<options>] <input_cfg_file> \n"
               << "  Simulation options: \n"
-              << "      --help Print this help text.\n"
-              <<  "     --imgdir <path> Specify directory where output images are written to. \n"
-              <<  "     --maxgen <num> Maximum number of generations to simulate.\n"
-              <<  "     --fps <num> Number of generations presented per second.\n"
-              <<  "     --blocksize <num> Pixel size of a cell. Default = 5.\n"
-              <<  "     --bkgcolor <color> Color name for the background. Default GREEN.\n"
-              <<  "     --alivecolor <color> Color name for representing alive cells. Default RED.\n"
-              <<  "     --outfile <filename> Write the text representation of the simulation\n"
-              <<  "     to the given filename.\n"
+              << "     --help Print this help text.\n"
+              << "     --imgdir <path> Specify directory where output images are written to. \n"
+              << "     --maxgen <num> Maximum number of generations to simulate.\n"
+              << "     --fps <num> Number of generations presented per second.\n"
+              << "     --blocksize <num> Pixel size of a cell. Default = 5.\n"
+              << "     --bkgcolor <color> Color name for the background. Default GREEN.\n"
+              << "     --alivecolor <color> Color name for representing alive cells. Default RED.\n"
+              << "     --outfile <filename> Write the text representation of the simulation\n"
+              << "     to the given filename.\n"
               << "  Available colors are:\n"
-              <<"       BLACK BLUE CRIMSON DARK_GREEN DEEP_SKY_BLUE DODGER_BLUE \n"
+              << "      BLACK BLUE CRIMSON DARK_GREEN DEEP_SKY_BLUE DODGER_BLUE \n"
               << "      GREEN LIGHT_BLUE LIGHT_GREY LIGHT_YELLOW RED STEEL_BLUE \n"
               <<"       WHITE YELLOW \n";
 
